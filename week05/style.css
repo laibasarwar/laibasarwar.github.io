@@ -1,0 +1,361 @@
+nav{
+  color:white;
+  background: #D97855;
+  text-align: center;
+}
+body{
+  background: white;
+}
+
+h4{
+  text-align: left;
+  color: black;
+  background: #A2E4F2;
+  padding: 10px;
+}
+img{
+  position: relative;
+  overflow: hidden;
+  width:100%;
+  height:auto;
+  aspect-ratio: 1/1;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto ;
+  align-items: stretch;
+}
+#text {
+  color:white;
+  text-align: center;
+  position: sticky;
+  display: inline-grid;
+  background-color: #DAB183;
+  opacity:0.7;
+  align-self: end;
+  display: grid;
+}
+.grid-item1 {
+  border-style: solid;
+  border-color: #9D4D31;
+  border-width: 5px;
+  position: relative;
+  display: inline-block;
+}
+.grid-item1 .image-change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.grid-item1:hover .image-change {
+    display: inline-grid;
+}
+
+.grid-item2 {
+  border-style: solid;
+  border-color: #9D4D31;]
+  border-width: 5px;
+  position: relative;
+  display: inline-block;
+}
+.grid-item2 .image-change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.grid-item2:hover .image-change {
+    display: inline-grid;
+}
+.grid-item3 {
+  border-style: solid;
+  border-color: #9D4D31;
+  border-width: 5px;
+  position: relative;
+  display: inline-block;
+}
+.grid-item3 .image-change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.grid-item3:hover .image-change {
+    display: inline-grid;
+}
+.grid-item4 {
+  border-style: solid;
+  border-color: #91CDF2;
+  border-width: 5px;
+  position: relative;
+  display: inline-block;
+}
+.grid-item4 .image-change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.grid-item4:hover .image-change {
+    display: inline-grid;
+}
+.grid-item5 {
+  border-style: solid;
+  border-color: #91CDF2;
+  border-width: 5px;
+  position: relative;
+  display: inline-block;
+}
+.grid-item5 .image-change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.grid-item5:hover .image-change {
+    display: inline-grid;
+}
+.grid-item6 {
+  border-style: solid;
+  border-color: #91CDF2;
+  border-width: 5px;
+  position: relative;
+  display: inline-block;
+}
+.grid-item6 .image-change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.grid-item6:hover .image-change {
+    display: inline-grid;
+}
+.grid-item7 {
+  border-style: solid;
+  border-color: #9D4D31;
+  border-width: 5px;
+  position: relative;
+  display: inline-block;
+}
+.grid-item7 .image-change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.grid-item7:hover .image-change {
+    display: inline-grid;
+}
+.grid-item8 {
+  border-style: solid;
+  border-color: #9D4D31;
+  border-width: 5px;
+  position: relative;
+  display: inline-block;
+}
+.grid-item8 .image-change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.grid-item8:hover .image-change {
+    display: inline-grid;
+}
+.grid-item9 {
+  border-style: solid;
+  border-color: #9D4D31;
+  border-width: 5px;
+  position: relative;
+  display: inline-block;
+}
+.grid-item9 .image-change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.grid-item9:hover .image-change {
+    display: inline-grid;
+}
+
+.grid-item10 {
+  border-style: solid;
+  border-color: #91CDF2;
+  border-width: 5px;
+  position: relative;
+  display: inline-block;
+}
+.grid-item10 .image-change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.grid-item10:hover .image-change {
+    display: inline-grid;
+}
+.grid-item11 {
+  border-style: solid;
+  border-color: #91CDF2;
+  border-width: 5px;
+  position: relative;
+  display: inline-block;
+}
+.grid-item11 .image-change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.grid-item11:hover .image-change {
+    display: inline-grid;
+}
+.grid-item12 {
+  border-style: solid;
+  border-color: #91CDF2;
+  border-width: 5px;
+  position: relative;
+  display: inline-block;
+}
+.grid-item12 .image-change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.grid-item12:hover .image-change {
+    display: inline-grid;
+}
+.grid-item13 {
+  border-style: solid;
+  border-color: #9D4D31;
+  border-width: 5px;
+  position: relative;
+  display: inline-block;
+}
+.grid-item13 .image-change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.grid-item13:hover .image-change {
+    display: inline-grid;
+}
+.grid-item14 {
+  border-style: solid;
+  border-color: #9D4D31;
+  border-width: 5px;
+  position: relative;
+  display: inline-block;
+}
+.grid-item14 .image-change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.grid-item14:hover .image-change {
+    display: inline-grid;
+}
+.grid-item15 {
+  border-style: solid;
+  border-color: #9D4D31;
+  border-width: 5px;
+  position: relative;
+  display: inline-block;
+}
+.grid-item15 .image-change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.grid-item15:hover .image-change {
+    display: inline-grid;
+}
+.grid-item16 {
+  border-style: solid;
+  border-color: #91CDF2;
+  border-width: 5px;
+  position: relative;
+  display: inline-block;
+}
+.grid-item16 .image-change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.grid-item16:hover .image-change {
+    display: inline-grid;
+}
+.grid-item17 {
+  border-style: solid;
+  border-color: #91CDF2;
+  border-width: 5px;
+  position: relative;
+  display: inline-block;
+}
+.grid-item17 .image-change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.grid-item17:hover .image-change {
+    display: inline-grid;
+}
+.grid-item18 {
+  border-style: solid;
+  border-color: #91CDF2;
+  border-width: 5px;
+  position: relative;
+  display: inline-block;
+}
+.grid-item18 .image-change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.grid-item18:hover .image-change {
+    display: inline-grid;
+}
+.flex-container{
+  display: flex;
+  justify-content: space-evenly;
+  color:white;
+  background: #D97855;
+  padding: 10px;
+  border-color: white;
+
+}
+.flex-item{
+  display: flex;
+  align-self:center;
+  order:3;
+  border-color: white;
+}
