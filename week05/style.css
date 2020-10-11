@@ -2,9 +2,11 @@ nav{
   color:white;
   background: #D97855;
   text-align: center;
+  font-family: 'Cormorant Garamond', serif;
 }
 body{
   background: white;
+
 }
 
 h4{
@@ -12,6 +14,7 @@ h4{
   color: black;
   background: #A2E4F2;
   padding: 10px;
+  font-family: 'Cormorant Garamond', serif;
 }
 img{
   position: relative;
@@ -25,6 +28,8 @@ img{
   display: grid;
   grid-template-columns: auto auto auto auto auto auto ;
   align-items: stretch;
+  font-family: 'Caveat', cursive;
+
 }
 #text {
   color:white;
@@ -351,6 +356,7 @@ img{
   background: #D97855;
   padding: 10px;
   border-color: white;
+  font-family: 'Cormorant Garamond', serif;
 
 }
 .flex-item{
@@ -358,4 +364,5 @@ img{
   align-self:center;
   order:3;
   border-color: white;
+  font-family: 'Cormorant Garamond', serif;
 }
