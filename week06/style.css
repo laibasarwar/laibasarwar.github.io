@@ -58,10 +58,9 @@ img{
 .grid-item1:hover .image-change {
     display: inline-grid;
 }
-
 .grid-item2 {
   border-style: solid;
-  border-color: #9D4D31;]
+  border-color: #9D4D31;
   border-width: 5px;
   position: relative;
   display: inline-block;
