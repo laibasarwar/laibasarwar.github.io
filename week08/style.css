@@ -1,23 +1,22 @@
-nav{
-   color:white;
-   background: #D97855;
-   text-align: center;
-   font-family: 'Cormorant Garamond', serif;
- }
  .nav-container{
   display: flex;
   justify-content: space-evenly;
-  color:white;
   padding: 10px;
-  border-color: white;
   font-family: 'Cormorant Garamond', serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+  background-color: white;
 }
 
 .nav-item{
   display: flex;
   align-self:center;
   order:3;
-  border-color: white;
   font-family: 'Cormorant Garamond', serif;
 }
 
@@ -26,18 +25,22 @@ nav{
 }
 
 .nav-item a {
-	color: #000;
-	font-size: 13px;
+	color: #D97855;
+	font-size: 20px;
 	font-weight: 300;
-	margin-left: 40px;
+	/* margin-left: 40px; */
   letter-spacing: 2px;
-	text-transform: uppercase;
+  text-transform: uppercase;
+  font-weight: bolder;
 } 
 .nav-item a:hover, .nav-item a.active {
   color: #ffffff;
+  background-color: #D97855;
 }
  body{
    background: white;
+   margin: 0;
+   margin-top: 75px;
  }
  
  h4{
@@ -79,16 +82,88 @@ nav{
  .flex-container{
    display: flex;
    justify-content: space-evenly;
-   color:white;
-   padding: 10px;
-   border-color: white;
+   color: white;
+   padding: 30px;
    font-family: 'Cormorant Garamond', serif;
- 
+  
  }
  .flex-item{
    display: flex;
    align-self:center;
    order:3;
-   border-color: white;
-   font-family: 'Cormorant Garamond', serif;
+   color: #000;
+   font-size: 13px;
+   font-weight: 300;
+   /* margin-left: 40px; */
+   letter-spacing: 2px;
+   text-transform: unset;
+   width: 50px;
+   height: 50px;
  }
+
+ .content{
+   background-color: #D97855;
+   margin-left: 10px;
+   margin-right: 10px;
+   padding: 10px;
+   display: flex;
+   flex-flow: auto auto;
+   align-items: center;
+ }
+
+ h3{
+   color: white;
+   margin-left: 10px;
+   margin-right: 10px;
+   font-family: 'Cormorant Garamond', serif;
+   font-size: 20px;
+   /* font-weight: 300; */
+   /* margin-left: 40px; */
+   letter-spacing: 2px;
+   /* text-transform: uppercase; */
+   font-weight: bolder; */
+ }
+ h1{
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px;
+  /* font-weight: 300; */
+  /* margin-left: 40px; */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bolder; 
+}
+
+ * {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  /* height: 300px; Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+/* .row:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+.staff-container {
+  display: grid;
+  /* background-color: #D97855; */
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  grid-template-columns: auto auto auto auto;
+  align-items: stretch;
+  font-family: 'Caveat', cursive;
+  aspect-ratio: 1:1;
+
+}
