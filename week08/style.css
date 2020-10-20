@@ -117,11 +117,8 @@
    margin-right: 10px;
    font-family: 'Cormorant Garamond', serif;
    font-size: 20px;
-   /* font-weight: 300; */
-   /* margin-left: 40px; */
    letter-spacing: 2px;
-   /* text-transform: uppercase; */
-   font-weight: bolder; */
+   font-weight: bolder;
  }
  h1{
   color: white;
@@ -129,8 +126,6 @@
   margin-right: 10px;
   font-family: 'Cormorant Garamond', serif;
   font-size: 25px;
-  /* font-weight: 300; */
-  /* margin-left: 40px; */
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: bolder; 
@@ -140,30 +135,18 @@
   box-sizing: border-box;
 }
 
-/* Create two equal columns that floats next to each other */
 .column {
   float: left;
   width: 50%;
   padding: 10px;
-  /* height: 300px; Should be removed. Only for demonstration */
 }
-
-/* Clear floats after the columns */
-/* .row:after {
-  content: "";
-  display: table;
-  clear: both;
-} */
 
 .staff-container {
   display: grid;
-  /* background-color: #D97855; */
   margin-left: 10px;
   margin-right: 10px;
   padding: 10px;
   grid-template-columns: auto auto auto auto;
   align-items: stretch;
   font-family: 'Caveat', cursive;
-  aspect-ratio: 1:1;
-
 }
