@@ -164,6 +164,103 @@ var aText = new Array(
     setTimeout("typewriter2()", iSpeed);
    }
   }
-  
-  
   typewriter2();
+
+
+  var cText = new Array(
+    "I hide myself within my flower,",
+    "That wearing on your breast,",
+    "You, unsuspecting, wear me too-",
+    "And angels know the rest.",
+    "",
+    "I hide myself within my flower,",
+    "That, fading from your vase,",
+    "You, unsuspecting, feel for me",
+    "Almost a loneliness.",
+  )
+
+  var iSpeed3 = 75; // time delay of print out
+  var iIndex3 = 0; // start printing array at this posision
+  var iArrLength3 = cText[0].length; // the length of the text array
+  var iScrollAt3 = 20; // start scrolling up at this many lines
+   
+  var iTextPos3 = 0; // initialise text position
+  var sContents3 = ''; // initialise contents variable
+  var iRow3; // initialise current row
+   
+  function typewriter3()
+  {
+   sContents3 =  ' ';
+   iRow3 = Math.max(0, iIndex3-iScrollAt3);
+   var destination3 = document.getElementById("typedtext3");
+   
+   while ( iRow3 < iIndex3 ) {
+    sContents3 += cText[iRow3++] + '<br />';
+   }
+   destination3.innerHTML = sContents3 + cText[iIndex3].substring(0, iTextPos3) + "|";
+   if ( iTextPos3++ == iArrLength3 ) {
+    iTextPos3 = 0;
+    iIndex3++;
+    if ( iIndex3 != cText.length ) {
+     iArrLength3 = cText[iIndex3].length;
+     setTimeout("typewriter3()", 700);
+    }
+   } else {
+    setTimeout("typewriter3()", iSpeed3);
+   }
+  }
+  typewriter3();
+
+  var dText = new Array(
+    "In visions of the dark night",
+    " I have dreamed of joy departed—",
+    "But a waking dream of life and light",
+    "Hath left me broken-hearted.",
+    "",
+    "Ah! what is not a dream by day",
+    "To him whose eyes are cast",
+    "On things around him with a ray",
+    "Turned back upon the past?",
+    "",
+    "That holy dream—that holy dream,",
+    "While all the world were chiding,",
+    "Hath cheered me as a lovely beam",
+    "A lonely spirit guiding.",
+    "",
+    "What though that light, thro' storm and night,",
+    "So trembled from afar—",
+    "What could there be more purely bright",
+    "In Truth's day-star?", 
+  )
+
+ var iSpeed4 = 75; // time delay of print out
+  var iIndex4 = 0; // start printing array at this posision
+  var iArrLength4 = dText[0].length; // the length of the text array
+  var iScrollAt4 = 20; // start scrolling up at this many lines
+   
+  var iTextPos4 = 0; // initialise text position
+  var sContents4 = ''; // initialise contents variable
+  var iRow4; // initialise current row
+   
+  function typewriter4()
+  {
+   sContents4 =  ' ';
+   iRow4 = Math.max(0, iIndex4-iScrollAt4);
+   var destination4 = document.getElementById("typedtext4");
+   
+   while ( iRow4 < iIndex4 ) {
+    sContents4 += dText[iRow4++] + '<br />';
+   }
+   destination4.innerHTML = sContents4 + dText[iIndex4].substring(0, iTextPos4) + "|";
+   if ( iTextPos4++ == iArrLength4 ) {
+    iTextPos4 = 0;
+    iIndex4++;
+    if ( iIndex4 != dText.length ) {
+     iArrLength4 = dText[iIndex4].length;
+     setTimeout("typewriter4()", 700);
+    }
+   } else {
+    setTimeout("typewriter4()", iSpeed4);
+   }
+  }
+  typewriter4();
