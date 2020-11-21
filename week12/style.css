@@ -206,3 +206,21 @@ img{
   margin-right: auto;
   text-align: center;
 }
+
+#Cover{
+  background: #0511F2;
+  font-weight: bolder;
+  font-size: 75px;
+  text-align: center;
+  text-transform: capitalize;
+  padding-top: -100px;
+}
+
+#Back_Cover{
+  background: #0511F2;
+  font-weight: bolder;
+  font-size: 75px;
+  text-align: center;
+  text-transform: capitalize;
+  padding-top: -100px;
+}
