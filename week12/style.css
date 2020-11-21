@@ -200,3 +200,9 @@ img{
   display: inline-block;
   
 }
+
+.letters{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
