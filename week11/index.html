@@ -1,0 +1,158 @@
+<!-- Reference: 
+  https://www.jqueryscript.net/animation/book-page-flip-effect.html 
+-->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pamela and Laiba's Poetry Book</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="nav-container">
+        <div class="nav-item">
+          <div>
+            <a href="https://github.com/pbuscema/pbuscema.github.io/tree/master/week12" target="_blank" ><img src="images/books1.png"></a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+
+        </div>
+
+        <div class="nav-item">
+
+        </div>
+
+        <div class="nav-item">
+
+        </div>
+
+        <div class="nav-item">
+          <div>
+            <a href="https://github.com/laibasarwar/laibasarwar.github.io/tree/master/week12" target="_blank" ><img src="images/books2.png"></a>
+          </div>
+        </div>
+    </nav>
+
+    <div class="scene">
+      <article class="book">
+      <section class="page active">
+        <div class="front" id="Cover">
+          <h1 class="ml1" onmouseover="mouseOver()" onmouseout="mouseOut()">
+            <span class="text-wrapper">
+              <span class="line line1"></span>
+              <span class="letters">
+                PAMELA AND LAIBA'S POETRY BOOK
+              </span>
+              <span class="line line2"></span>
+            </span>
+          </h1>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    </div>
+
+    <div class="back" id="Page1">
+      <h1>– 1 –</h1>
+      <h2>
+        <strong> A DREAM</strong><br> By Edgar Allan Poe
+      </h2>
+
+      <h3>
+        <div id="typedtext4"></div>
+      </h3>
+    </div>
+
+  </section>
+
+  <section class="page">
+    <div class="front" id="Page2">
+      <h1>– 2 –</h1>
+      <h1>
+        <img src="images/dream.jpg" img width="500px" img height="500px">
+      </h1>
+      
+    </div>
+    <div class="back" id="Page3">
+      <h1>– 3 –</h1>
+      <h2>
+        <strong>WITH A FLOWER</strong><br>By Emily Dickinson</h2>
+        <h3>
+          <div id="typedtext3"></div>
+        </h3>
+    </div>
+  </section>
+
+    <section class="page">
+    <div class="front" id="Page4">
+      <h1>– 4 –</h1>
+      <h1>
+        <img src="images/garden.jpg" img width="500px" img height="500px">
+      </h1>
+    </div>
+    <div class="back" id="Page5">
+      <h1>– 5 –</h1>
+      <h2>
+        You're getting older, and there are such few boys.
+      </h2>
+      <p>
+        <div id="typedtext1"></div>
+      </p>
+    </div>
+  </section>
+    <section class="page">
+    <div class="front" id="Page6">
+      <h1>– 6 –</h1>
+      <h1>
+        <img src="images/greenwhich_village-2.jpg" img width="500px" img height="500px">
+      </h1>
+      
+    </div>
+    <div class="back" id="Page7">
+      <h1>– 7 –</h1>
+      <h2>
+        Aleppo
+      </h2>
+      <p>
+        <div id="typedtext2"></div>
+      </p>
+    </div>
+  </section>
+    <section class="page">
+    <div class="front" id="Page8">
+      <h1>– 8 –</h1>
+      <h1>
+        <img src="images/middle_east-2.jpg" img width="500px" img height="500px">
+      </h1>
+    </div>
+    <div class="back" id="Back_Cover">
+      <h1 class="ml1">
+        <span class="text-wrapper">
+          <span class="line line1"></span>
+          <span class="letters">The End!</span>
+          <span class="line line2"></span>
+        </span>
+      </h1>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    </div>
+  </section>
+
+</article>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/jquery-hammerjs@2.0.0/jquery.hammer.min.js'></script>
+  <script  src="script.js"></script>
+
+
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
