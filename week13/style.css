@@ -1,0 +1,105 @@
+body{
+    background: white;
+    background-image: url('orange-green.png');
+
+}
+
+
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(Challenge.ttf);
+ }
+ @font-face {
+    font-family: mySecondFont;
+    src: url(BlankNote-Regular.otf);
+ }
+ @font-face {
+    font-family: myThirdFont;
+    src: url(CormorantGaramond-Medium.ttf);
+ }
+ @font-face {
+    font-family: font1;
+    src: url(Aileron-Light.otf);
+ }
+ @font-face {
+    font-family: font2;
+    src: url(couriernew.otf);
+ }
+ @font-face {
+    font-family: font3;
+    src: url(Montez-Regular.ttf);
+ }
+ @font-face {
+    font-family: font4;
+    src: url(Autography.otf);
+ }
+ @font-face {
+    font-family: font5;
+    src: url(aAutoSignature.ttf);
+ }
+ @font-face {
+    font-family: font6;
+    src: url(kinda_sweet.ttf);
+ }
+ @font-face {
+    font-family: font7;
+    src: url(lust_slim.ttf);
+ }
+ @font-face {
+    font-family: font8;
+    src: url(maybe_one_day.ttf);
+ }
+ @font-face {
+    font-family: font9;
+    src: url(partner.otf);
+ }
+ @font-face {
+    font-family: font10;
+    src: url(the_artisan.otf);
+ }
+
+ h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: font7;
+}
+
+h2{
+    font-family: font9;
+    /* margin-left:50px; */
+    /* margin-right:50px; */ 
+}
+h3{
+    font-family: font6;
+    font-size: 50px;
+    margin-left:50px;
+}
+h5{
+    font-family: font9;
+}
+
+p{
+    font-family: font9;
+}
+
+.card{
+    /* background-color:#D97855; */
+    /* background-color:black; */
+    margin-bottom: 50px;
+}
+.card1{
+    /* background-color:#A1BF9D; */
+    /* background-color:white; */
+    margin-bottom: 50px;
+}
+.nav-item{
+    font-family: font7;
+    color:black;
+    font-size: 30px;
+}
+
+.navbar navbar-light bg-light{
+    background-color:#A1BF9D;
+}

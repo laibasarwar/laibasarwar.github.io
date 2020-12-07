@@ -1,0 +1,192 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [ {
+    "geometry" : {
+      "coordinates" : [ 74.8672281, 31.6332336 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=10966535197320118070",
+      "Location" : {
+        "Address" : "Guru Arjun Nagar, Amritsar, Punjab 143001, India",
+        "Business Name" : "Amritsar Junction",
+        "Country Code" : "IN",
+        "Geo Coordinates" : {
+          "Latitude" : "31.6332336",
+          "Longitude" : "74.8672281"
+        }
+      },
+      "Published" : "2020-12-04T15:25:00Z",
+      "Title" : "Amritsar Junction",
+      "Updated" : "2020-12-04T15:25:00Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 77.2549491, 28.5885595 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=13689508950802724001",
+      "Location" : {
+        "Address" : "Block A, Ganga Vihar, Sarai Kale Khan, New Delhi, Delhi 110013, India",
+        "Business Name" : "Hazrat Nizamuddin Railway Station",
+        "Country Code" : "IN",
+        "Geo Coordinates" : {
+          "Latitude" : "28.5885595",
+          "Longitude" : "77.2549491"
+        }
+      },
+      "Published" : "2020-12-04T15:18:56Z",
+      "Title" : "Hazrat Nizamuddin Railway Station",
+      "Updated" : "2020-12-04T15:18:56Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 77.2134616, 28.6651199 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=9414645559562136913",
+      "Location" : {
+        "Address" : "11054, Railway Colony, Tis Hazari, New Delhi, Delhi 110054, India",
+        "Business Name" : "Masjid Sher Shah Soori Tees Hazari",
+        "Country Code" : "IN",
+        "Geo Coordinates" : {
+          "Latitude" : "28.6651199",
+          "Longitude" : "77.2134616"
+        }
+      },
+      "Published" : "2020-12-04T15:11:19Z",
+      "Title" : "Masjid Sher Shah Soori Tees Hazari",
+      "Updated" : "2020-12-04T15:11:19Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 74.5741360, 31.6047570 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=3626265924100268457",
+      "Location" : {
+        "Address" : "Wagah, Hardo Rattan, Punjab 143108, India",
+        "Business Name" : "Wagah",
+        "Country Code" : "IN",
+        "Geo Coordinates" : {
+          "Latitude" : "31.6047570",
+          "Longitude" : "74.5741360"
+        }
+      },
+      "Published" : "2020-12-02T17:55:40Z",
+      "Title" : "Wagah",
+      "Updated" : "2020-12-02T17:55:40Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 75.8495208, 30.9119721 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=5153392179238225494",
+      "Location" : {
+        "Address" : "railway station, Near Ghanta Ghar, Jagraon bridge entry gate, Ludhiana, Punjab 141001, India",
+        "Business Name" : "Ludhiana Railway Station",
+        "Geo Coordinates" : {
+          "Latitude" : "30.9119721",
+          "Longitude" : "75.8495208"
+        }
+      },
+      "Published" : "2020-12-02T17:54:27Z",
+      "Title" : "Ludhiana Railway Station",
+      "Updated" : "2020-12-02T17:54:27Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 77.2190894, 28.6428915 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=17911162059406858518",
+      "Location" : {
+        "Address" : "Bhavbhuti Marg, Ratan Lal Market, Kamla Market, Ajmeri Gate, New Delhi, Delhi 110006, India",
+        "Business Name" : "New Delhi Railway Station",
+        "Country Code" : "IN",
+        "Geo Coordinates" : {
+          "Latitude" : "28.6428915",
+          "Longitude" : "77.2190894"
+        }
+      },
+      "Published" : "2020-12-02T17:53:32Z",
+      "Title" : "New Delhi Railway Station",
+      "Updated" : "2020-12-02T17:53:32Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 77.2410203, 28.6561592 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=4908416671633375995",
+      "Location" : {
+        "Address" : "Netaji Subhash Marg, Lal Qila, Chandni Chowk, New Delhi, Delhi 110006, India",
+        "Business Name" : "Red Fort",
+        "Country Code" : "IN",
+        "Geo Coordinates" : {
+          "Latitude" : "28.6561592",
+          "Longitude" : "77.2410203"
+        }
+      },
+      "Published" : "2020-12-02T17:51:00Z",
+      "Title" : "Red Fort",
+      "Updated" : "2020-12-02T17:51:00Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 77.2334421, 28.6506792 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=15949276658289057174",
+      "Location" : {
+        "Address" : "Jama Masjid Rd, Jama Masjid, Chandni Chowk, New Delhi, Delhi 110006, India",
+        "Business Name" : "Jama Masjid",
+        "Country Code" : "IN",
+        "Geo Coordinates" : {
+          "Latitude" : "28.6506792",
+          "Longitude" : "77.2334421"
+        }
+      },
+      "Published" : "2020-12-02T17:50:19Z",
+      "Title" : "Jama Masjid",
+      "Updated" : "2020-12-02T17:50:19Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 77.2437371, 28.6095744 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1410323091018665139",
+      "Location" : {
+        "Address" : "Mathura Rd, Near Delhi Zoo, New Delhi, Delhi 110003, India",
+        "Business Name" : "Purana Qila",
+        "Country Code" : "IN",
+        "Geo Coordinates" : {
+          "Latitude" : "28.6095744",
+          "Longitude" : "77.2437371"
+        }
+      },
+      "Published" : "2020-12-02T17:45:02Z",
+      "Title" : "Purana Qila",
+      "Updated" : "2020-12-02T17:45:02Z"
+    },
+    "type" : "Feature"
+  } ]
+}
