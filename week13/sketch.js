@@ -1,7 +1,6 @@
 
 //references for map: https://www.youtube.com/watch?v=Ae73YY_GAU8&ab_channel=TheCodingTrain, https://mappa.js.org/docs/using-data.html
 
-
 class Destination {
   constructor(x, y, diameter, name) {
     this.x = x;
@@ -15,7 +14,7 @@ class Destination {
 
   // Check if mouse is over the destination
   rollover(px, py) {
-    let d = dist(px, py, this.x, this.y);
+    let d = dist(px+20, py+20, this.x, this.y);
     this.over = d < this.radius;
   }
 
@@ -31,9 +30,13 @@ class Destination {
       fill(0);
       textAlign(CENTER);
       text(this.name+" "+this.x+" "+this.y, this.x, this.y + 30);
+      rect(this.x,this.y,20,20);
     }
   }
 }
+
+let snowflakes = []; // array to hold snowflake objects
+
 
 let dix=50;
 let diy=50;
@@ -46,7 +49,7 @@ var button;//button to toggle song
 var dadatextfile; //declaring text file
 let font; //declaring font variable
 let fonttitle;
-fontsize=27; //declaring size of font
+fontsize=20; //declaring size of font
 let lines = []; //declared lines array
 let phrase = 0; //declared first phrase of lines
 
@@ -59,8 +62,9 @@ let imgparagraph=[];//array for the image paragraphs
 let pintable;
 let destinations=[]; //easier to put all pins in one list
 let pin;
+let mapimage;
 let box;
-let r=0;
+let r=255;
 let g=0;
 let b=0;
 let ximg,yimg,ximg1,ximg2;
@@ -72,6 +76,10 @@ let pakistanmap;//declared variable for my map
 let canvas;//declares canvas variable to declare the overall canvas
 
 let train;
+let pindi_home;
+let pindix=0;
+let pindiy=0;
+
 
 const options = {//options for initial position of map
   lat: 30.9119721,//initial latitude
@@ -95,7 +103,7 @@ function preload() {
   song = loadSound('DadaUrdu6.mp3'); //load voiceover in song variable
 
   dadatextfile=loadStrings('dada_english.txt',doText); //import strings from text file into the doText function to transfer into data
-  font = loadFont('Montez-Regular.ttf');//load selected font
+  font = loadFont('lust_slim.ttf');//load selected font
   fonttitle=loadFont('partner.otf');
 
 
@@ -108,6 +116,8 @@ function preload() {
   imgparagraph[2] = loadImage('Artboard2.png');
   pin=loadImage("https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678111-map-marker-512.png");
   partitiontrain=loadImage('train.png');
+  mapimage=loadImage('mapimage.png');
+  pindi_home=loadImage('pindi_home.png');
   
 
 }
@@ -127,17 +137,17 @@ function setup() {
     // Get position, diameter, name,
     let x = pin_data[i].getNum("geometry/coordinates/1");
     let y = pin_data[i].getNum("geometry/coordinates/0");
-    let diameter =pin //pos.x-25,pos.y-25
+    let diameter =100 //pos.x-25,pos.y-25
     let name = pin_data[i].getString("properties/Title");
 
     // Put object in array
     destinations.push(new Destination(x, y, diameter, name));
   }
   
-    button = createButton('on/off');//button to pause and play song
-    button.position(windowWidth/2-25,100);//position to be in top middle
-    button.mousePressed(toggleSong);//enable by mousePress
-    song.play();//play song function
+    // button = createButton('on/off');//button to pause and play song
+    // button.position(windowWidth/2-25,100);//position to be in top middle
+    // button.mousePressed(toggleSong);//enable by mousePress
+    // song.play();//play song function
     amp = new p5.Amplitude();//creat new amplitude class from built in p5 sound library    
     setInterval(movingPhrases,5000);
 
@@ -154,8 +164,7 @@ function setup() {
     v=0;
     vx=0;
     vy=0;
-
-    // train = new Train(initial.x, initial.y);
+    train=new Train(windowWidth-510,windowHeight-100);
 }
 
 function draw() {
@@ -165,14 +174,23 @@ function draw() {
     drawSquare(); //function to make frame
     textprocessed();//function for text
     soundWave(); //function for sound wave
-    button.position(windowWidth/2-25,100);
+    // button.position(windowWidth/2-25,100);
     
   }else if (scene==2){
     background(255);//green background
-    button.position(windowWidth/2,windowHeight); //take out button from view
+    
+    song.pause();
+    // button.position(windowWidth/2,windowHeight); //take out button from view
+    textFont(fonttitle);
+    textAlign(CENTER);
+    textSize(35);
+    let title2="Journal Entries of My Grandfather's Train Journey";
+    text(title2,windowWidth/2,150);
     imgChange();//call to function for images array 
     drawSquare();  
-  }else if (scene==3){
+  } else if (scene==3){
+    song.pause();
+    background(255);
     clear();//basically new background, but for map specifically
     pakistanmap.overlay(canvas);//overlays the canvas with the map
 
@@ -200,17 +218,18 @@ function draw() {
     drawTrain(t1,t2);
     drawTrain(t2,t3);
     drawTrain(t3,t4);
+    // drawSquare();  
+  } else if (scene==4){
+    background(0);
+    song.pause();
+    backgroundMap();
+    train.update();
+    train.show();
     
-    // train.update();
-    // train.show();
-    // t1.add(t2);
-    // t2.add(t3);
-    // t3.add(t4);
-    // train.update();
-    
-    drawSquare();  
+    // drawSquare();  
   }  
 }
+
 function drawTrain(initial, target){
   // push();
   let myheading=initial.heading(target);
@@ -218,8 +237,9 @@ function drawTrain(initial, target){
   // rotate(target.heading());
   line(initial.x, initial.y, target.x, target.y);
 
-  image(partitiontrain, initial.x,initial.y,80,72);
-  image(partitiontrain, target.x,target.y,80,72);
+
+  // image(partitiontrain, initial.x,initial.y,80,72);
+  // image(partitiontrain, target.x,target.y,80,72);
 
   
     v = p5.Vector.fromAngle(radians(myheading), 30);
@@ -245,7 +265,7 @@ function drawSquare(){
   noStroke();//white squares to make a frame on each side of the window
   fill(217,120,85);
   rect(windowWidth/2,0,squareWidth,100);//I am using windowWidth to make it more responsive and not having to completely hardcode
-  squareWidth=squareWidth+20;
+  squareWidth=squareWidth+7.5;
   // console.log(squareWidth);
   if (squareWidth > windowWidth/2) {
     squareWidth = windowWidth/2;
@@ -255,7 +275,7 @@ function drawSquare(){
   // rect(0,0,100,windowHeight);
   if (squareWidth==windowWidth/2){
     rect(windowWidth-100,0,100,squareWidth1);
-    squareWidth1=squareWidth1+20;
+    squareWidth1=squareWidth1+7.5;
     // console.log(squareWidth1);
     if (squareWidth1 > windowHeight) {
       squareWidth1 = windowHeight;
@@ -264,7 +284,7 @@ function drawSquare(){
   }
   if (squareWidth1==windowHeight){
     rect(windowWidth,windowHeight-100,squareWidth2,100);
-    squareWidth2=squareWidth2-20;
+    squareWidth2=squareWidth2-7.5;
     console.log(squareWidth2);
     if (squareWidth2<-(width/2)) {//-720
       squareWidth2 = -(width/2);
@@ -273,7 +293,7 @@ function drawSquare(){
   fill(161,191,157);
   if (squareWidth2==-(width/2)){
     rect(windowWidth/2,windowHeight-100,squareWidth3,100);
-    squareWidth3=squareWidth3-20;
+    squareWidth3=squareWidth3-7.5;
     console.log(squareWidth3);
     if (squareWidth3<-(width/2)) {
       squareWidth3 = -(width/2);
@@ -281,7 +301,7 @@ function drawSquare(){
   }
   if (squareWidth3==-(width/2)){
     rect(0,windowHeight,100,squareWidth4);
-    squareWidth4=squareWidth4-20;
+    squareWidth4=squareWidth4-7.5;
     console.log(squareWidth4);
     if (squareWidth4<-windowHeight) {
       squareWidth4 = -windowHeight;
@@ -289,7 +309,7 @@ function drawSquare(){
   }
   if (squareWidth4==-windowHeight){
     rect(0,0,squareWidth5,100);
-    squareWidth5=squareWidth5+20;
+    squareWidth5=squareWidth5+7.5;
     console.log(squareWidth5);
     if (squareWidth5> windowWidth/2) {
       squareWidth5 = windowWidth/2;
@@ -303,7 +323,7 @@ function textprocessed(){
   textFont(fonttitle);
   textSize(35);
   textAlign(CENTER);
-  title="Journey to Independence"
+  title="My Grandfather's Train Journey to Independence";
   
   for (word in title){
     text(title,windowWidth/2,200);
@@ -323,8 +343,13 @@ function textprocessed(){
 function movingPhrases(){
   if (phrase==lines.length-1){
   phrase=0;
+  song.pause();
+
   } else {
       phrase++;
+  }
+  if (phrase==1){
+    song.play();
   }
 }
 
@@ -338,9 +363,9 @@ function soundWave(){//adapted from https://www.youtube.com/watch?v=jEwAMgcCgOA
   strokeWeight(5);
   noFill();
   for (var i = 0; i < volhistory.length; i++) {//accessing each amp volume in song file and array
-    stroke(r+i,g,b);
+    stroke(r-i*0.25,g,b);
     var y = map(volhistory[i]*2, 0, 1, height/2+50, 0);//puts it into each amp level and positions it on top using height
-    vertex(i+(width/2)-200, y);//each vertex from the translation of y
+    vertex(i+(width/2)-325, y);//each vertex from the translation of y
     // fill(vol,0);//fill the level from vol variable
   }
   endShape();
@@ -350,10 +375,74 @@ function soundWave(){//adapted from https://www.youtube.com/watch?v=jEwAMgcCgOA
   // }
 }
 
+function backgroundMap(){
+  // imageMode(CENTER);//centers positioon
+  image(mapimage, 0, 0, windowWidth,windowHeight);
+
+}
+
+class Train {
+  constructor(x, y) {
+    this.pos = createVector(x, y);
+    this.vel = createVector(-1, -1);
+  }
+
+  update() {    
+    this.pos.add(this.vel);
+  }
+
+  show() {
+    stroke(255);
+    strokeWeight(2);
+    fill(255, 100);
+    // ellipse(this.pos.x, this.pos.y, 32);
+    // rotate(PI / 3.0);
+    image(partitiontrain, this.pos.x,this.pos.y,100,80);
+    // console.log(this.pos.x,this.pos.y);
+    if ((this.pos.x==windowWidth-545) && (this.pos.y==windowHeight-135)){
+      this.vel=createVector(0, 0);
+    }
+    if ((this.pos.x==windowWidth-545) && (this.pos.y==windowHeight-135)){
+      this.vel=createVector(-1, -2);
+    }
+    if ((this.pos.x==windowWidth-779) && (this.pos.y==windowHeight-603)){
+      this.vel=createVector(0, 0);
+    }
+    if ((this.pos.x==windowWidth-779) && (this.pos.y==windowHeight-603)){
+      this.vel=createVector(-2, -1.5);
+    }
+    if ((this.pos.x==windowWidth-975) && (this.pos.y==windowHeight-750)){
+      this.vel=createVector(0,0);
+    }
+    if ((this.pos.x==windowWidth-975) && (this.pos.y==windowHeight-750)){
+      this.vel=createVector(-0.625,0.0625);//0.50, 0.05
+    }
+    if ((this.pos.x==windowWidth-1015) && (this.pos.y==windowHeight-746)){
+      this.vel=createVector(0,0);
+      image(pindi_home,this.pos.x-35,this.pos.y,pindix,pindiy);
+      pindix=pindix+1;
+      pindiy=pindiy+1;
+      console.log(pindix,pindiy);
+      // stroke(0);
+      fill(0);
+      textFont(fonttitle);
+      textSize(fontsize);
+      textAlign(CENTER);
+      let caption="Our Childhood Home"
+      text(caption, windowWidth/2, windowHeight-755);
+      if (pindix==700) {
+        pindix=pindix+0;
+        pindiy=pindiy+y;//glitch, wont work if i put +0
+      }
+    }
+
+  }
+}
+
 function imgChange(){
   for(i = 0; i < imgparagraph.length; i++){//parses the imgparagraph array 
     imageMode(CENTER);//centers positioon
-    image(imgparagraph[0], ximg, yimg, 350,550);//places the image in array in random placess inside the frame with size of 200,100
+    image(imgparagraph[0], ximg, yimg, 350,400);//places the image in array in random placess inside the frame with size of 200,100
     //image(imgparagraph[1], ximg, yimg+50, 200,100);
     
     ximg=ximg-1;
@@ -361,14 +450,14 @@ function imgChange(){
       ximg = 300;
     }
     if (ximg==300){
-      image(imgparagraph[1], ximg1, yimg, 350,550);
+      image(imgparagraph[1], ximg1, yimg, 350,400);
       ximg1=ximg1-1;
       if (ximg1<width/2){
         ximg1=width/2;
       }
     }
     if (ximg1==width/2){
-      image(imgparagraph[2], ximg2, yimg, 350,550);
+      image(imgparagraph[2], ximg2, yimg, 350,400);
       ximg2=ximg2-1;
       if (ximg2<windowWidth-300){
         ximg2=windowWidth-300;
@@ -379,49 +468,12 @@ function imgChange(){
   
 }
 
-
-
 function keyPressed(){
   if (keyCode==32){
     scene++;//spacebar moves scene
-    if (scene>3){
+    if (scene>4){
       scene=1;//repositions to 1rst scene if space exaceeds the number of scenes
     }
     
   }
-}
-
-class Train{
-  constructor(x,y){
-    // this.initial = createVector(x, y); //initial.x,initial.y
-    // this.target = createVector(target.x, target.y);
-    // this.heading=initial.heading(target);
-    // this.v = p5.Vector.fromAngle(radians(this.heading), 30);
-    // this.vx = v.x;
-    // this.vy = v.y;
-    // console.log(this.heading);
-    // console.log(this.initial);
-
-    this.pos = createVector(x, y);
-    this.vel = createVector(1, -1);
-  }
-
-  update() {    
-    this.pos.add(this.vel);
-    // this.initial.x.add(this.v.x);
-    // this.initial.y.add(this.v.y);
-  }
-
-  show(){
-    push();
-    // let myheading=
-    
-    // rotate(target.heading());
-    // line(this.initial.x, this.initial.y, this.target.x, this.target.y);
-    // console.log(this.initial.x);
-    // image(partitiontrain, this.initial.x,this.initial.y,80,72);
-    image(partitiontrain, this.pos.x,this.pos.y,80,72);
-    pop();
-  }
-
 }
