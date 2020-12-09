@@ -1,61 +1,87 @@
+@media only screen and (max-width: 600px) {
+   .card{
+      /* trying to position to the center when screen gets smaller */
+      position:center; 
+      float:left;
+      width:50px;
+   }
+   .row{
+      position: center;
+      width:0%;
+      /* tryingto get the width distance to decrease */
+   }
+
+   .container{
+      float:none;
+      /* no container anymore when screen is smaller */
+   }
+   .col-6{
+      width:100%;
+      /* want each column to be seperate */
+   } 
+
+ }
+
 body{
     background: white;
     background-image: url('orange-green.png');
+    background-position: center;
+    /* positions image to center */
 
 }
 
 
-
+/* all the fonts */
 @font-face {
-    font-family: myFirstFont;
+    font-family: font1;
     src: url(Challenge.ttf);
  }
  @font-face {
-    font-family: mySecondFont;
+    font-family: font2;
     src: url(BlankNote-Regular.otf);
  }
  @font-face {
-    font-family: myThirdFont;
+    font-family: font3;
     src: url(CormorantGaramond-Medium.ttf);
  }
  @font-face {
-    font-family: font1;
+    font-family: font4;
     src: url(Aileron-Light.otf);
  }
  @font-face {
-    font-family: font2;
+    font-family: font5;
     src: url(couriernew.otf);
  }
  @font-face {
-    font-family: font3;
+    font-family: font6;
     src: url(Montez-Regular.ttf);
  }
  @font-face {
-    font-family: font4;
+    font-family: font7;
     src: url(Autography.otf);
  }
  @font-face {
-    font-family: font5;
+    font-family: font8;
     src: url(aAutoSignature.ttf);
  }
  @font-face {
-    font-family: font6;
+    font-family: font9;
     src: url(kinda_sweet.ttf);
  }
  @font-face {
-    font-family: font7;
+    font-family: font10;
     src: url(lust_slim.ttf);
  }
  @font-face {
-    font-family: font8;
+    font-family: font11;
     src: url(maybe_one_day.ttf);
  }
  @font-face {
-    font-family: font9;
+    font-family: font12;
     src: url(partner.otf);
  }
  @font-face {
-    font-family: font10;
+    font-family: font13;
     src: url(the_artisan.otf);
  }
 
@@ -64,39 +90,46 @@ body{
     margin-top: 50px;
     margin-bottom: 50px;
     font-family: font7;
+    text-decoration: underline;
+    font-size: 50px;
+    font-weight: bold;
 }
 
 h2{
-    font-family: font9;
+    font-family: font12;
     /* margin-left:50px; */
     /* margin-right:50px; */ 
 }
 h3{
-    font-family: font6;
-    font-size: 50px;
+    font-family: font3;
+    /* font-size: 50px; */
     margin-left:50px;
 }
 h5{
-    font-family: font9;
+    font-family: font10;
 }
 
 p{
-    font-family: font9;
+    font-family: font3;
 }
 
 .card{
     /* background-color:#D97855; */
     /* background-color:black; */
+    /* to add distance */
     margin-bottom: 50px;
+
 }
 .card1{
     /* background-color:#A1BF9D; */
     /* background-color:white; */
+
     margin-bottom: 50px;
 }
 .nav-item{
     font-family: font7;
     color:black;
+    /* make the font a bit bigger */
     font-size: 30px;
 }
 
