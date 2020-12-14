@@ -1,3 +1,5 @@
+/* Tried making it more user friendly and taking the comments on the peer review, changed background image, made hover navigation, created media queries */
+
 @media only screen and (max-width: 600px) {
    .card{
       /* trying to position to the center when screen gets smaller */
@@ -24,8 +26,14 @@
 
 body{
     background: white;
-    background-image: url('orange-green.png');
+    background-image: url('orange-green_3.png');
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* 228,225 */
+    /* min-height: 500px; */
+    /* background-attachment: fixed; */
     /* positions image to center */
 
 }
@@ -104,13 +112,17 @@ h3{
     font-family: font3;
     /* font-size: 50px; */
     margin-left:50px;
+    background-color: white; padding:20px;
+    
 }
 h5{
     font-family: font10;
+    /* background-color: white; padding:20px; */
 }
 
 p{
     font-family: font3;
+    /* background-color: white; padding:20px; */
 }
 
 .card{
@@ -126,13 +138,43 @@ p{
 
     margin-bottom: 50px;
 }
-.nav-item{
+.nav-item a{
     font-family: font7;
     color:black;
     /* make the font a bit bigger */
     font-size: 30px;
+       font-weight: bolder;
+   text-decoration: none;
+   /* padding: 13px; */
+	font-weight: 300;
+   letter-spacing: 2px;
+    /* @include media-breakpoint-up(md){
+       color:white;  */
+    
 }
+/* hover change of color */
+.nav-item a:hover {
+   color: #ffffff;
+   background-color: lightblue;
 
-.navbar navbar-light bg-light{
+   /* background-color: #D97855; */
+   /* position: relative; */
+   display: inline-block;
+   
+ }
+/* .navbar navbar-light bg-light{
     background-color:#A1BF9D;
-}
+} */
+
+/* trying to make cards not stack up */
+@media only screen and (max-width: 800px) {
+   body {
+     font-weight: 200;
+     color:pink;
+
+   }
+   .card{
+      padding:20px;
+      float:auto;
+   }
+ }
